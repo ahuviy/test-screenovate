@@ -44,7 +44,7 @@ function TextBox() {
         value={text}
         onChange={onInputChange}
       />
-      <button className={styles.button} disabled={!selectedContactId}>
+      <button className={styles.button} disabled={!selectedContactId || text === ''}>
         +
       </button>
     </form>

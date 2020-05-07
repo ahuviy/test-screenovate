@@ -13,10 +13,10 @@ function Contact({ contact, isActive }) {
   return (
     <div className={classNames(styles.wrapper, isActive && styles.active)} onClick={selectContact}>
       <div className={styles.avatar} style={avatarStyle} />
-      <div>
+      <div className={styles.text}>
         <div>{contact.name}</div>
         {contact.messages.length > 0 && (
-          <div>{contact.messages[contact.messages.length - 1].text}</div>
+          <div className={styles.message}>{contact.messages[contact.messages.length - 1].text}</div>
         )}
       </div>
     </div>

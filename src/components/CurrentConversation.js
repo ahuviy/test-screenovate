@@ -24,7 +24,7 @@ function CurrentConversation() {
             <div className={styles.avatar} style={avatarStyle} />
             <div>{selectedContact.name}</div>
           </div>
-          <div>
+          <div className={styles.messages}>
             {selectedContact.messages.map((m) => (
               <Message key={m.timestamp} message={m} />
             ))}

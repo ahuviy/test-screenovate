@@ -12,5 +12,18 @@
   border-radius: 50%;
   height: 40px;
   width: 40px;
+  min-width: 40px;
   margin-right: 5px;
+}
+
+.text {
+  width: calc(100% - 45px);
+}
+
+.message {
+  font-size: 14px;
+  margin-top: 4px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

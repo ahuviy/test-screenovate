@@ -1,12 +1,14 @@
 .wrapper {
-  flex: 1;
-  padding: 0 20px;
+  position: relative;
+  height: calc(100% - 40px);
 }
 
 .title {
   display: flex;
   align-items: center;
+  padding: 0 20px;
   margin-bottom: 20px;
+  height: 40px;
 }
 
 .avatar {
@@ -14,4 +16,10 @@
   height: 40px;
   width: 40px;
   margin-right: 5px;
+}
+
+.messages {
+  overflow-y: auto;
+  height: calc(100% - 60px);
+  padding: 0 20px;
 }
