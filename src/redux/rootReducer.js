@@ -43,16 +43,13 @@ export const rootReducer = (state = initialState, action) => {
 };
 
 function addMessage({ state, contactId, text, isIncoming }) {
-  return {
-    ...state,
-    contacts: state.contacts.map((c) => {
-      if (c.id === contactId) {
-        const timestamp = Date.now();
-        const messages = c.messages.concat({ text, timestamp, isIncoming });
-        return { ...c, messages };
-      } else {
-        return c;
-      }
-    }),
-  };
+  const relevantContact = state.contacts.find((c) => c.id === contactId);
+  const timestamp = Date.now();
+  const messages = relevantContact.messages.concat({ text, timestamp, isIncoming });
+
+  const newContacts = [{ ...relevantContact, messages }].concat(
+    state.contacts.filter((c) => c.id !== contactId)
+  );
+
+  return { ...state, contacts: newContacts };
 }
