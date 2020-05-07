@@ -1,8 +1,13 @@
 .wrapper {
+  position: relative;
   color: white;
-  padding-top: 5px;
+  padding: 5px;
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+
+  &.last {
+    margin-bottom: 20px;
+  }
 }
 
 .incoming {
@@ -11,4 +16,24 @@
 
 .outgoing {
   background-color: red;
+}
+
+.triangletopleft {
+  width: 0;
+  height: 0;
+  border-top: 10px solid gray;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.triangletopright {
+  width: 0;
+  height: 0;
+  border-top: 10px solid red;
+  border-left: 10px solid transparent;
+  position: absolute;
+  bottom: -10px;
+  right: 0;
 }

@@ -25,8 +25,12 @@ function CurrentConversation() {
             <div>{selectedContact.name}</div>
           </div>
           <div className={styles.messages}>
-            {selectedContact.messages.map((m) => (
-              <Message key={m.timestamp} message={m} />
+            {selectedContact.messages.map((m, idx) => (
+              <Message
+                key={m.timestamp}
+                message={m}
+                nextMessage={selectedContact.messages[idx + 1]}
+              />
             ))}
           </div>
         </>
