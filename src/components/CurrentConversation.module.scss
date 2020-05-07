@@ -1,0 +1,17 @@
+.wrapper {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+}
